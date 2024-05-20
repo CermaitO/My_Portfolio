@@ -1,0 +1,251 @@
+body {
+    background-color: rgb(12, 12, 12);
+    font-family: "Salsa", cursive;
+    color: rgb(233, 221, 221);
+}
+
+.salsa-regular {
+    font-family: "Salsa", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#overlay {
+    animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    padding-top: 10px;
+    margin: -10px -10px 0px -10px;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: none;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#intro {
+    top: 20px;
+    background-size: 50%;
+    height: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#intro-text {
+    top: 30px;
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+#large-image {
+    max-height: 700px;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    animation: fadeInAnimation ease 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#panel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.panel {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.panel:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    width: 350px;
+}
+
+#panel1 {
+    background-image: url("Napostron-min.PNG");
+    background-size: 100%;
+    background-position-y: 40%;
+    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+}
+
+#panel1::after {
+    content: '';
+    position: absolute;
+    background: rgb(0, 0, 0);
+    inset: 0;
+    z-index: -1;
+    opacity: 0.2;
+    border-radius: 30px;
+}
+
+#panel2 {
+    background-image: url("darkplace1.PNG");
+    background-position-y: 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#panel3 {
+    background-image: url("Jarlaki-min (1).PNG");
+    background-size: 100%;
+    background-position-y: 78%;
+    background-repeat: no-repeat;
+}
+
+.panel-image {
+    max-width: 400px;
+    position: absolute;
+    z-index: 1;
+}
+
+#panel-text {
+    position: relative;
+    z-index: 2;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(233, 221, 221);
+}
+
+#skills-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skill {
+    padding: 35px;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin: 20px;
+    cursor: pointer;
+    text-align: center;
+    overflow-block:scroll;
+}
+
+.skill:hover {
+    background-color: beige;
+    color: black;
+}
+
+.skill p {
+    text-align: left;
+    max-width: 100%;
+    
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+#contact, #contact-list {
+    text-align: center;
+}
+
+#contact-list {
+    list-style-type: none;
+}
+
+#contact-list li {
+    padding: 10px;
+}
+
+#contact-list li a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        display: none;
+    }
+
+    #intro-text {
+        max-width: 300px;
+    }
+
+    #projects p {
+        max-width: 200px;
+        margin-left: 110px;
+    }
+
+    #intro {
+        overflow: hidden;
+    }
+
+    #panel1, #panel2, #panel3 {
+        max-width: 350px;
+    }
+
+}
